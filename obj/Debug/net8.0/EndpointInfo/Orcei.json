@@ -1,0 +1,1369 @@
+{
+  "openapi": "3.0.4",
+  "info": {
+    "title": "API",
+    "version": "v1"
+  },
+  "paths": {
+    "/Orcamentos/Criar": {
+      "post": {
+        "tags": [
+          "Orcamentos"
+        ],
+        "summary": "Cria um orçamento. Permite anônimo; se o usuário estiver autenticado, vincula ao usuário do JWT.",
+        "requestBody": {
+          "description": "Dados do orçamento",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Orcei.Models.Usuarios.CriarOrcamentoRequest"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Orcei.Models.Usuarios.CriarOrcamentoRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Orcei.Models.Usuarios.CriarOrcamentoRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Orcei.Models.Usuarios.CriarOrcamentoRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Orcei.Models.Usuarios.CriarOrcamentoResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Orcei.Models.Usuarios.CriarOrcamentoResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Orcei.Models.Usuarios.CriarOrcamentoResponse"
+                }
+              }
+            }
+          },
+          "412": {
+            "description": "Precondition Failed",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Orcei.Models.Conexao.HaveException"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Orcei.Models.Conexao.HaveException"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Orcei.Models.Conexao.HaveException"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Orcei.Models.Conexao.HaveException"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Orcei.Models.Conexao.HaveException"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Orcei.Models.Conexao.HaveException"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Orcamentos/GerarPDF/{slug}": {
+      "get": {
+        "tags": [
+          "Orcamentos"
+        ],
+        "summary": "Retorna um PDF do orçamento selecionado.",
+        "parameters": [
+          {
+            "name": "slug",
+            "in": "path",
+            "description": "Identificador legível do orçamento",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/pdf": {
+                "schema": {
+                  "$ref": "#/components/schemas/Orcei.Models.Usuarios.OrcamentoDetalhe"
+                }
+              }
+            }
+          },
+          "412": {
+            "description": "Precondition Failed",
+            "content": {
+              "application/pdf": {
+                "schema": {
+                  "$ref": "#/components/schemas/Orcei.Models.Conexao.HaveException"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/pdf": {
+                "schema": {
+                  "$ref": "#/components/schemas/Orcei.Models.Conexao.HaveException"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Orcamentos/CalcularFrete": {
+      "post": {
+        "tags": [
+          "Orcamentos"
+        ],
+        "summary": "Retorna valores do frete calculado.",
+        "requestBody": {
+          "description": "Identificador legível do orçamento",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Orcei.Models.Frete.CalcularFreteRequest"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Orcei.Models.Frete.CalcularFreteRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Orcei.Models.Frete.CalcularFreteRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Orcei.Models.Frete.CalcularFreteRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Orcei.Models.Usuarios.OrcamentoDetalhe"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Orcei.Models.Usuarios.OrcamentoDetalhe"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Orcei.Models.Usuarios.OrcamentoDetalhe"
+                }
+              }
+            }
+          },
+          "412": {
+            "description": "Precondition Failed",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Orcei.Models.Conexao.HaveException"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Orcei.Models.Conexao.HaveException"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Orcei.Models.Conexao.HaveException"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Orcei.Models.Conexao.HaveException"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Orcei.Models.Conexao.HaveException"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Orcei.Models.Conexao.HaveException"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Orcamentos/Publico/{slug}": {
+      "get": {
+        "tags": [
+          "Orcamentos"
+        ],
+        "summary": "Retorna um orçamento público pelo slug.",
+        "parameters": [
+          {
+            "name": "slug",
+            "in": "path",
+            "description": "Identificador legível do orçamento",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Orcei.Models.Usuarios.OrcamentoDetalhe"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Orcei.Models.Usuarios.OrcamentoDetalhe"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Orcei.Models.Usuarios.OrcamentoDetalhe"
+                }
+              }
+            }
+          },
+          "412": {
+            "description": "Precondition Failed",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Orcei.Models.Conexao.HaveException"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Orcei.Models.Conexao.HaveException"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Orcei.Models.Conexao.HaveException"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Orcei.Models.Conexao.HaveException"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Orcei.Models.Conexao.HaveException"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Orcei.Models.Conexao.HaveException"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Orcamentos/Meus": {
+      "get": {
+        "tags": [
+          "Orcamentos"
+        ],
+        "summary": "Lista orçamentos do usuário autenticado.",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Orcei.Models.Usuarios.OrcamentoListaItem"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Orcei.Models.Usuarios.OrcamentoListaItem"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Orcei.Models.Usuarios.OrcamentoListaItem"
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Orcei.Models.Conexao.HaveException"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Orcei.Models.Conexao.HaveException"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Orcei.Models.Conexao.HaveException"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Orcei.Models.Conexao.HaveException"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Orcei.Models.Conexao.HaveException"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Orcei.Models.Conexao.HaveException"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Orcamentos/CompararPrecos": {
+      "post": {
+        "tags": [
+          "Orcamentos"
+        ],
+        "summary": "Retorna médias por site (novos/usados) para o termo informado.",
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Orcei.Models.Usuarios.CompararPrecosRequest"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Orcei.Models.Usuarios.CompararPrecosRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Orcei.Models.Usuarios.CompararPrecosRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Orcei.Models.Usuarios.CompararPrecosRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Orcei.Models.Usuarios.CompararPrecosResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Orcei.Models.Usuarios.CompararPrecosResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Orcei.Models.Usuarios.CompararPrecosResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Orcei.Models.Conexao.HaveException"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Orcei.Models.Conexao.HaveException"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Orcei.Models.Conexao.HaveException"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Login/PreLogin": {
+      "post": {
+        "tags": [
+          "Usuarios"
+        ],
+        "summary": "Endpoint que irá validar as condições do usuário e gerar o código para autenticar.",
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Orcei.Models.Usuarios.PreLoginRequest"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Orcei.Models.Usuarios.PreLoginRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Orcei.Models.Usuarios.PreLoginRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Orcei.Models.Usuarios.PreLoginRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Orcei.Models.Usuarios.RetornoDadoGeradoUsuarioResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Orcei.Models.Usuarios.RetornoDadoGeradoUsuarioResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Orcei.Models.Usuarios.RetornoDadoGeradoUsuarioResponse"
+                }
+              }
+            }
+          },
+          "412": {
+            "description": "Precondition Failed",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Orcei.Models.Conexao.HaveException"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Orcei.Models.Conexao.HaveException"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Orcei.Models.Conexao.HaveException"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Orcei.Models.Conexao.HaveException"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Orcei.Models.Conexao.HaveException"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Orcei.Models.Conexao.HaveException"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Login/RegistrarUsuario": {
+      "post": {
+        "tags": [
+          "Usuarios"
+        ],
+        "summary": "Registra o usuário no banco de dados",
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Orcei.Models.Usuarios.RegistrarUsuarioRequest"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Orcei.Models.Usuarios.RegistrarUsuarioRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Orcei.Models.Usuarios.RegistrarUsuarioRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Orcei.Models.Usuarios.RegistrarUsuarioRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "boolean"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              }
+            }
+          },
+          "412": {
+            "description": "Precondition Failed",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Orcei.Models.Conexao.HaveException"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Orcei.Models.Conexao.HaveException"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Orcei.Models.Conexao.HaveException"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Orcei.Models.Conexao.HaveException"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Orcei.Models.Conexao.HaveException"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Orcei.Models.Conexao.HaveException"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Login/Login/{codigo}": {
+      "post": {
+        "tags": [
+          "Usuarios"
+        ],
+        "summary": "Recebe dados do usuário e gera o código jwt",
+        "parameters": [
+          {
+            "name": "codigo",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "keepMeConnected",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Orcei.Models.Usuarios.RetornoUsuariosGeral"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Orcei.Models.Usuarios.RetornoUsuariosGeral"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Orcei.Models.Usuarios.RetornoUsuariosGeral"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Orcei.Models.Usuarios.RetornoUsuariosGeral"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "boolean"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              }
+            }
+          },
+          "412": {
+            "description": "Precondition Failed",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Orcei.Models.Conexao.HaveException"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Orcei.Models.Conexao.HaveException"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Orcei.Models.Conexao.HaveException"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Orcei.Models.Conexao.HaveException"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Orcei.Models.Conexao.HaveException"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Orcei.Models.Conexao.HaveException"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Login/Logout": {
+      "post": {
+        "tags": [
+          "Usuarios"
+        ],
+        "summary": "Deleta o JWT atual para realizar o logout",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Orcei.Models.Usuarios.LogoutModel"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Orcei.Models.Usuarios.LogoutModel"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Orcei.Models.Usuarios.LogoutModel"
+                }
+              }
+            }
+          },
+          "412": {
+            "description": "Precondition Failed",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Orcei.Models.Conexao.HaveException"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Orcei.Models.Conexao.HaveException"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Orcei.Models.Conexao.HaveException"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Orcei.Models.Conexao.HaveException"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Orcei.Models.Conexao.HaveException"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Orcei.Models.Conexao.HaveException"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Orcei.Models.Conexao.HaveException": {
+        "type": "object",
+        "properties": {
+          "statusCode": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "dataExtra": {
+            "nullable": true
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "object",
+            "additionalProperties": { },
+            "nullable": true,
+            "readOnly": true
+          },
+          "innerException": {
+            "nullable": true
+          },
+          "helpLink": {
+            "type": "string",
+            "nullable": true
+          },
+          "source": {
+            "type": "string",
+            "nullable": true
+          },
+          "hResult": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "stackTrace": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Orcei.Models.Frete.CalcularFreteRequest": {
+        "type": "object",
+        "properties": {
+          "origem": {
+            "$ref": "#/components/schemas/Orcei.Models.Frete.FreteEnderecoDto"
+          },
+          "destino": {
+            "$ref": "#/components/schemas/Orcei.Models.Frete.FreteEnderecoDto"
+          },
+          "pesoKg": {
+            "type": "number",
+            "format": "double"
+          },
+          "retornoVazio": {
+            "type": "boolean"
+          },
+          "package": {
+            "$ref": "#/components/schemas/Orcei.Models.Frete.FretePackageDto"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Orcei.Models.Frete.FreteEnderecoDto": {
+        "type": "object",
+        "properties": {
+          "cep": {
+            "type": "string",
+            "nullable": true
+          },
+          "uf": {
+            "type": "string",
+            "nullable": true
+          },
+          "cidade": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Orcei.Models.Frete.FretePackageDto": {
+        "type": "object",
+        "properties": {
+          "height": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "width": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "length": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Orcei.Models.Usuarios.CompararPrecosRequest": {
+        "type": "object",
+        "properties": {
+          "categoria": {
+            "type": "string",
+            "nullable": true
+          },
+          "modelo": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Orcei.Models.Usuarios.CompararPrecosResponse": {
+        "type": "object",
+        "properties": {
+          "newPriceAvg": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "usedPriceAvg": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "priceMin": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "priceMax": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "newSites": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Orcei.Models.Usuarios.SiteAverage"
+            },
+            "nullable": true
+          },
+          "usedSites": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Orcei.Models.Usuarios.SiteAverage"
+            },
+            "nullable": true
+          },
+          "newPriceSources": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "usedPriceSources": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Orcei.Models.Usuarios.CriarOrcamentoRequest": {
+        "type": "object",
+        "properties": {
+          "categoria": {
+            "type": "string",
+            "nullable": true
+          },
+          "modelo": {
+            "type": "string",
+            "nullable": true
+          },
+          "anosUso": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "condicao": {
+            "type": "string",
+            "nullable": true
+          },
+          "urgencia": {
+            "type": "string",
+            "nullable": true
+          },
+          "temCaixaManual": {
+            "type": "boolean"
+          },
+          "temNotaFiscal": {
+            "type": "boolean"
+          },
+          "observacoes": {
+            "type": "string",
+            "nullable": true
+          },
+          "mediaNovo": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "mediaUsado": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "precoMin": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "precoMax": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "precoEscolhido": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "fotos": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "usuarioId": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "nomeCompleto": {
+            "type": "string",
+            "nullable": true
+          },
+          "incluirTransporte": {
+            "type": "boolean"
+          },
+          "valorTransporteManual": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "valorTransporteCalculado": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Orcei.Models.Usuarios.CriarOrcamentoResponse": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "slug": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Orcei.Models.Usuarios.LogoutModel": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "boolean"
+          },
+          "mensagem": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Orcei.Models.Usuarios.OrcamentoDetalhe": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "slug": {
+            "type": "string",
+            "nullable": true
+          },
+          "categoria": {
+            "type": "string",
+            "nullable": true
+          },
+          "modelo": {
+            "type": "string",
+            "nullable": true
+          },
+          "anosUso": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "condicao": {
+            "type": "string",
+            "nullable": true
+          },
+          "urgencia": {
+            "type": "string",
+            "nullable": true
+          },
+          "temCaixaManual": {
+            "type": "boolean"
+          },
+          "temNotaFiscal": {
+            "type": "boolean"
+          },
+          "observacoes": {
+            "type": "string",
+            "nullable": true
+          },
+          "mediaNovo": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "mediaUsado": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "precoMin": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "precoMax": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "precoEscolhido": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "nomeCompleto": {
+            "type": "string",
+            "nullable": true
+          },
+          "incluirTransporte": {
+            "type": "boolean"
+          },
+          "valorTransporteManual": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "valorTransporteCalculado": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "criadoEm": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "fotos": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Orcei.Models.Usuarios.OrcamentoListaItem": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "slug": {
+            "type": "string",
+            "nullable": true
+          },
+          "titulo": {
+            "type": "string",
+            "nullable": true
+          },
+          "criadoEm": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "precoEscolhido": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Orcei.Models.Usuarios.PreLoginRequest": {
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Orcei.Models.Usuarios.RegistrarUsuarioRequest": {
+        "type": "object",
+        "properties": {
+          "nomeUsuario": {
+            "type": "string",
+            "nullable": true
+          },
+          "emailUsuario": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Orcei.Models.Usuarios.RetornoDadoGeradoUsuarioResponse": {
+        "type": "object",
+        "properties": {
+          "mensagem": {
+            "type": "string",
+            "nullable": true
+          },
+          "validade": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "dadosUsuario": {
+            "$ref": "#/components/schemas/Orcei.Models.Usuarios.RetornoUsuariosGeral"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Orcei.Models.Usuarios.RetornoUsuariosGeral": {
+        "type": "object",
+        "properties": {
+          "codigoUsuario": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "dtaRegistro": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "nomeUsuario": {
+            "type": "string",
+            "nullable": true
+          },
+          "emailUsuario": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Orcei.Models.Usuarios.SiteAverage": {
+        "type": "object",
+        "properties": {
+          "site": {
+            "type": "string",
+            "nullable": true
+          },
+          "valor": {
+            "type": "number",
+            "format": "double"
+          },
+          "qtd": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "securitySchemes": {
+      "X-CSRF-TOKEN": {
+        "type": "apiKey",
+        "description": "Token CSRF gerado pelo frontend",
+        "name": "X-CSRF-TOKEN",
+        "in": "header"
+      }
+    }
+  },
+  "security": [
+    {
+      "X-CSRF-TOKEN": [ ]
+    }
+  ]
+}

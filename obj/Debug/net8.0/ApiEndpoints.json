@@ -1,0 +1,425 @@
+[
+  {
+    "ContainingType": "Orcei.Controllers.Usuarios.UsuariosController",
+    "Method": "Login",
+    "RelativePath": "Login/Login/{codigo}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Orcei.Models.Usuarios.RetornoUsuariosGeral",
+        "IsRequired": true
+      },
+      {
+        "Name": "codigo",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "keepMeConnected",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Boolean",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Orcei.Models.Conexao.HaveException",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 412
+      },
+      {
+        "Type": "Orcei.Models.Conexao.HaveException",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 500
+      }
+    ]
+  },
+  {
+    "ContainingType": "Orcei.Controllers.Usuarios.UsuariosController",
+    "Method": "Logout",
+    "RelativePath": "Login/Logout",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "Orcei.Models.Usuarios.LogoutModel",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Orcei.Models.Conexao.HaveException",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 412
+      },
+      {
+        "Type": "Orcei.Models.Conexao.HaveException",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 500
+      }
+    ]
+  },
+  {
+    "ContainingType": "Orcei.Controllers.Usuarios.UsuariosController",
+    "Method": "PreLogin",
+    "RelativePath": "Login/PreLogin",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Orcei.Models.Usuarios.PreLoginRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Orcei.Models.Usuarios.RetornoDadoGeradoUsuarioResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Orcei.Models.Conexao.HaveException",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 412
+      },
+      {
+        "Type": "Orcei.Models.Conexao.HaveException",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 500
+      }
+    ]
+  },
+  {
+    "ContainingType": "Orcei.Controllers.Usuarios.UsuariosController",
+    "Method": "RegistrarUsuario",
+    "RelativePath": "Login/RegistrarUsuario",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Orcei.Models.Usuarios.RegistrarUsuarioRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Boolean",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Orcei.Models.Conexao.HaveException",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 412
+      },
+      {
+        "Type": "Orcei.Models.Conexao.HaveException",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 500
+      }
+    ]
+  },
+  {
+    "ContainingType": "Orcei.Controllers.Orcamentos.OrcamentosController",
+    "Method": "CalcularFrete",
+    "RelativePath": "Orcamentos/CalcularFrete",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "req",
+        "Type": "Orcei.Models.Frete.CalcularFreteRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Orcei.Models.Usuarios.OrcamentoDetalhe",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Orcei.Models.Conexao.HaveException",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 412
+      },
+      {
+        "Type": "Orcei.Models.Conexao.HaveException",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 500
+      }
+    ]
+  },
+  {
+    "ContainingType": "Orcei.Controllers.Orcamentos.OrcamentosController",
+    "Method": "CompararPrecos",
+    "RelativePath": "Orcamentos/CompararPrecos",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "req",
+        "Type": "Orcei.Models.Usuarios.CompararPrecosRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Orcei.Models.Usuarios.CompararPrecosResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Orcei.Models.Conexao.HaveException",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 500
+      }
+    ]
+  },
+  {
+    "ContainingType": "Orcei.Controllers.Orcamentos.OrcamentosController",
+    "Method": "Criar",
+    "RelativePath": "Orcamentos/Criar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Orcei.Models.Usuarios.CriarOrcamentoRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Orcei.Models.Usuarios.CriarOrcamentoResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Orcei.Models.Conexao.HaveException",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 412
+      },
+      {
+        "Type": "Orcei.Models.Conexao.HaveException",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 500
+      }
+    ]
+  },
+  {
+    "ContainingType": "Orcei.Controllers.Orcamentos.OrcamentosController",
+    "Method": "GerarPDF",
+    "RelativePath": "Orcamentos/GerarPDF/{slug}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "slug",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Orcei.Models.Usuarios.OrcamentoDetalhe",
+        "MediaTypes": [
+          "application/pdf"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Orcei.Models.Conexao.HaveException",
+        "MediaTypes": [
+          "application/pdf"
+        ],
+        "StatusCode": 412
+      },
+      {
+        "Type": "Orcei.Models.Conexao.HaveException",
+        "MediaTypes": [
+          "application/pdf"
+        ],
+        "StatusCode": 500
+      }
+    ]
+  },
+  {
+    "ContainingType": "Orcei.Controllers.Orcamentos.OrcamentosController",
+    "Method": "Meus",
+    "RelativePath": "Orcamentos/Meus",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Orcei.Models.Usuarios.OrcamentoListaItem, Orcei, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Orcei.Models.Conexao.HaveException",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 401
+      },
+      {
+        "Type": "Orcei.Models.Conexao.HaveException",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 500
+      }
+    ]
+  },
+  {
+    "ContainingType": "Orcei.Controllers.Orcamentos.OrcamentosController",
+    "Method": "Publico",
+    "RelativePath": "Orcamentos/Publico/{slug}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "slug",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Orcei.Models.Usuarios.OrcamentoDetalhe",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Orcei.Models.Conexao.HaveException",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 412
+      },
+      {
+        "Type": "Orcei.Models.Conexao.HaveException",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 500
+      }
+    ]
+  }
+]

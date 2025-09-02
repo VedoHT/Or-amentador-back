@@ -1,0 +1,125 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "G:\\Estudos\\C#\\Orcei\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{56C9234C-4AE6-4E7F-939A-B7A5F2D467B2}|Orcei.csproj|g:\\estudos\\c#\\orcei\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{56C9234C-4AE6-4E7F-939A-B7A5F2D467B2}|Orcei.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56C9234C-4AE6-4E7F-939A-B7A5F2D467B2}|Orcei.csproj|g:\\estudos\\c#\\orcei\\servicosconexao\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56C9234C-4AE6-4E7F-939A-B7A5F2D467B2}|Orcei.csproj|solutionrelative:servicosconexao\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56C9234C-4AE6-4E7F-939A-B7A5F2D467B2}|Orcei.csproj|g:\\estudos\\c#\\orcei\\servicosconexao\\services\\comparadorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56C9234C-4AE6-4E7F-939A-B7A5F2D467B2}|Orcei.csproj|solutionrelative:servicosconexao\\services\\comparadorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56C9234C-4AE6-4E7F-939A-B7A5F2D467B2}|Orcei.csproj|g:\\estudos\\c#\\orcei\\controllers\\usuarios\\orcamentoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56C9234C-4AE6-4E7F-939A-B7A5F2D467B2}|Orcei.csproj|solutionrelative:controllers\\usuarios\\orcamentoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56C9234C-4AE6-4E7F-939A-B7A5F2D467B2}|Orcei.csproj|g:\\estudos\\c#\\orcei\\models\\usuarios\\orcamentosmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56C9234C-4AE6-4E7F-939A-B7A5F2D467B2}|Orcei.csproj|solutionrelative:models\\usuarios\\orcamentosmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56C9234C-4AE6-4E7F-939A-B7A5F2D467B2}|Orcei.csproj|g:\\estudos\\c#\\orcei\\modulos\\orcamento\\orcamentosmodulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56C9234C-4AE6-4E7F-939A-B7A5F2D467B2}|Orcei.csproj|solutionrelative:modulos\\orcamento\\orcamentosmodulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "G:\\Estudos\\C#\\Orcei\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "G:\\Estudos\\C#\\Orcei\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-09-02T11:22:56.471Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Startup.cs",
+              "DocumentMoniker": "G:\\Estudos\\C#\\Orcei\\ServicosConexao\\Startup.cs",
+              "RelativeDocumentMoniker": "ServicosConexao\\Startup.cs",
+              "ToolTip": "G:\\Estudos\\C#\\Orcei\\ServicosConexao\\Startup.cs",
+              "RelativeToolTip": "ServicosConexao\\Startup.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAawCMAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-02T11:22:26.382Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ComparadorService.cs",
+              "DocumentMoniker": "G:\\Estudos\\C#\\Orcei\\ServicosConexao\\Services\\ComparadorService.cs",
+              "RelativeDocumentMoniker": "ServicosConexao\\Services\\ComparadorService.cs",
+              "ToolTip": "G:\\Estudos\\C#\\Orcei\\ServicosConexao\\Services\\ComparadorService.cs",
+              "RelativeToolTip": "ServicosConexao\\Services\\ComparadorService.cs",
+              "ViewState": "AgIAAJYAAAAAAAAAAAAAAK4AAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-02T11:09:58.823Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "OrcamentosController.cs",
+              "DocumentMoniker": "G:\\Estudos\\C#\\Orcei\\Controllers\\Usuarios\\OrcamentosController.cs",
+              "RelativeDocumentMoniker": "Controllers\\Usuarios\\OrcamentosController.cs",
+              "ToolTip": "G:\\Estudos\\C#\\Orcei\\Controllers\\Usuarios\\OrcamentosController.cs",
+              "RelativeToolTip": "Controllers\\Usuarios\\OrcamentosController.cs",
+              "ViewState": "AgIAAJ8AAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-19T23:14:06.083Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "OrcamentosModulo.cs",
+              "DocumentMoniker": "G:\\Estudos\\C#\\Orcei\\Modulos\\Orcamento\\OrcamentosModulo.cs",
+              "RelativeDocumentMoniker": "Modulos\\Orcamento\\OrcamentosModulo.cs",
+              "ToolTip": "G:\\Estudos\\C#\\Orcei\\Modulos\\Orcamento\\OrcamentosModulo.cs",
+              "RelativeToolTip": "Modulos\\Orcamento\\OrcamentosModulo.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAwwGsAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-22T18:15:02.659Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "OrcamentosModel.cs",
+              "DocumentMoniker": "G:\\Estudos\\C#\\Orcei\\Models\\Usuarios\\OrcamentosModel.cs",
+              "RelativeDocumentMoniker": "Models\\Usuarios\\OrcamentosModel.cs",
+              "ToolTip": "G:\\Estudos\\C#\\Orcei\\Models\\Usuarios\\OrcamentosModel.cs",
+              "RelativeToolTip": "Models\\Usuarios\\OrcamentosModel.cs",
+              "ViewState": "AgIAAGUAAAAAAAAAAAAkwIIAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-26T02:15:21.381Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
